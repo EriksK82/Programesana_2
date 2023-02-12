@@ -17,7 +17,24 @@
 
 
 #include <iostream>
+#include "Header.h"
 
-int main() {
+using namespace std;
 
+
+int main()
+{
+    Rectangle r(3,4);
+   
+    r.print();
+    cout << "Length: " << r.Length() << endl;
+    cout << "Width: " << r.Width() << endl;
+    cout << "Perimeter: " << r.Perimeter() << endl;
+    cout << "Area: " <<  r.Area() << endl;
+    cout << "IsSquare: " << r.IsSquare() << endl;
+
+
+   cout << endl;
+
+   return 0;
 }
