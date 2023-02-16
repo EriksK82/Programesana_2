@@ -57,26 +57,28 @@ int Character::GetLife()
     return 0;
 }
     
-void Character::Go(char direction)//t-top, b-bottom, l-left, r-right parbaude, soļu skaita parbaude
+void Character::Go(char d)//t-top, b-bottom, l-left, r-right parbaude, soļu skaita parbaude
 {
     
     if (life<=0) {
         cout<<"Personāžs ir Dead"<<endl;
     } else {
        
-        if (direction != 't' && direction != 'r' && direction != 'l' && direction != 'b' && Character::life > 0) {
-            cout << "Move direction is invalid" << endl;
-         
-        }
-
-        if (Character::life > 0) {
-            for (int i = 0; i < 10; i++) {
-                if (i != 9) {
-                    Character::path[i] = Character::path[i + 1];
+        if (d == 't' || d == 'r' || d == 'l' || d == 'b') {
+            
+            if (Character::life > 0) {
+                for (int i = 0; i < 10; i++) {
+                    if (i != 9) {
+                        Character::path[i] = Character::path[i + 1];
+                    }
                 }
-            }
 
-            Character::path[9] = direction;
+                Character::path[9] = d;
+            }
+         
+        } else{
+            cout << "Nepareizs virziens " << endl;
+            
         }
     }
 }
