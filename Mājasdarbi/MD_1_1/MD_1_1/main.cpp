@@ -13,32 +13,52 @@ using namespace std;
 
 int main()
 {
+    cout<<"Personāžš Suns"<<endl;
     
-    cout<< "Kurš paliks dzīvs no Charakteriem?"<<endl<<endl;
+    Character Ch1("suns", 10);//Testa personāžs Nr.1 (vards,dzivibas)
     
-    
-    Character Ch1("Eriks", 10);//Testa personāžs Nr.1 (vards,dzivibas)
-    int Ch1_HitsTaken = 4;//samazina personāža dzīvi par parametra vērtību
-    int Ch1_MoveCount = 12;// personāža move skaits
-    
-    Ch1.Go(Ch1_MoveCount);// Go parbauda vai ievadits korekti, liek ievadīt kustības virzienus pēc augstāk noteikta skaita;
-    Ch1.Hit(Ch1_HitsTaken);//statuss dead or alive
-    Ch1.GetLife();//izvada aktuālo dzīvību skaitu
-    Ch1.PrintCharacter();// informacijas izvade Vards, dzivibas, gajieni......
-  
-    
-    Character Ch2("Katrina", 7);
-    int Ch2_HitsTaken = 7;
-    int Ch2_MoveCount = 5;
+    Ch1.Go('t');
+    Ch1.Go('t');
+    Ch1.Go('t');
+    Ch1.Go('t');
+    Ch1.Go('t');
+    Ch1.Go('t');
+    Ch1.Go('t');
+    Ch1.Go('t');
+    Ch1.Go('t');
+    Ch1.Go('t');
+    Ch1.Go('t');
+    Ch1.Go('t');
+    Ch1.Go('t');
+    Ch1.Go('b');
+    Ch1.Go('b');
+    Ch1.Go('l');
+    Ch1.Go('b');
+    Ch1.Go('b');
+    Ch1.Hit(1);
 
-    Ch2.Go(Ch2_MoveCount);
-    Ch2.Hit(Ch2_HitsTaken);
-    Ch2.GetLife();
-    Ch2.Hit(Ch2_HitsTaken);
-    Ch2.Go(Ch2_MoveCount);
+    
+    Ch1.PrintCharacter();
+    cout << endl;
+    
+    cout<<"Personāžš Suns"<<endl;
+    
+    Character Ch2("kaķis", 7);
+    
+    Ch2.Go('t');
+    Ch2.Go('t');
+    Ch2.Go('t');
+    Ch2.Go('t');
+    Ch2.Go('t');
+    Ch2.Go('t');
+    Ch2.Hit(5);
+    Ch2.Go('t');
+    Ch2.Hit(2);
+    Ch2.Go('t');
+    
+
+    
     Ch2.PrintCharacter();
-
-   cout << endl;
 
    return 0;
 }

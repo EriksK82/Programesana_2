@@ -57,33 +57,26 @@ int Character::GetLife()
     return 0;
 }
     
-void Character::Go(char j)//t-top, b-bottom, l-left, r-right parbaude, soļu skaita parbaude
+void Character::Go(char direction)//t-top, b-bottom, l-left, r-right parbaude, soļu skaita parbaude
 {
     
     if (life<=0) {
         cout<<"Personāžs ir Dead"<<endl;
     } else {
-        
-        char ch;
-        
-        cout <<endl<<"Craracter "<<name<< " ievadiet kustibas virzienu t-top, b-bottom, l-left, r-right"<<endl;
-        for (int i=0; i<j; i++) {//j saņemtā vertiba par iešanas virzieniem
-            
-            do//parbauda vai ievade korekta liek ievadīt atkārtoti ja nav korekti
-            {
-                cin >> ch;
-                
-                if ((ch != 't') && (ch != 'b') && (ch != 'l')&& (ch != 'r'))
-                { cout << "nepareiza ievade!!" << endl;
-                    cout << "jābūt t-top, b-bottom, l-left, r-right" << endl;
-                }
-                
-                Character::path[i-(j-10)] = ch;// piešķir i tajai vērtībai jaunu vērtību un pavirza par i v;ertību tā lai būtu pēdējās 10 vērtības.
-                
-                
-            }
-            while ((ch != 't') && (ch != 'b') && (ch != 'l')&& (ch != 'r'));
+       
+        if (direction != 't' && direction != 'r' && direction != 'l' && direction != 'b' && Character::life > 0) {
+            cout << "Move direction is invalid" << endl;
+         
+        }
 
+        if (Character::life > 0) {
+            for (int i = 0; i < 10; i++) {
+                if (i != 9) {
+                    Character::path[i] = Character::path[i + 1];
+                }
+            }
+
+            Character::path[9] = direction;
         }
     }
 }

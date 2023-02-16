@@ -52,7 +52,7 @@ public:
 private:
     string name;
     int life;
-    char path[10] = {' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',};//ja ir tikai 10 vērtības kā ievadīt vairāk??
+    char path[10];
 };
 
 #endif /* Header_h */
