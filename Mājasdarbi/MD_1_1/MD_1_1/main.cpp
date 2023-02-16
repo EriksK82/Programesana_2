@@ -23,18 +23,21 @@ int main()
     Ch1.Go('l');
     Ch1.Go('t');
     Ch1.Go('t');
+    Ch1.Hit(1);
     Ch1.Go('l');
     Ch1.Go('t');
     Ch1.Go('t');
     Ch1.Go('t');
+    Ch1.Hit(1);
     Ch1.Go('t');
     Ch1.Go('t');
     Ch1.Go('t');
+    Ch1.Hit(1);
     Ch1.Go('b');
     Ch1.Go('b');
     Ch1.Go('s');//nepareiza ievade
     Ch1.Go('b');
-    Ch1.Go('b');
+    Ch1.Go('l');
     Ch1.Hit(1);
 
     
@@ -55,7 +58,8 @@ int main()
     Ch2.Go('t');
     Ch2.Hit(2);
     Ch2.Go('t');
-    
+    Ch2.Hit(2);
+    Ch2.Go('t');
 
     
     Ch2.PrintCharacter();

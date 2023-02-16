@@ -13,20 +13,18 @@ using namespace std;
 Character::Character(string name, int life){
     Character::name = name;
 
-    if (life > 10) { // ja dzives skaits ir lielaks par 10, tad pieskiram maksimalu vertibu (10)
+    if (life > 10) { // ja dzives skaits ir lielaks par 10, tad definējam ka 10 dzivibas
         Character::life = 10;
         return;
     }
 
-    if (life < 1) { // ja dzives skaits ir mazaks par 1, tad pieskiram minimalu vertibu (1)
+    if (life < 1) { // ja dzives skaits ir mazaks par 1, tad definējam ka 10 dzivibas
         Character::life = 1;
         return;
     }
 
     Character::life = life;
 }
-
-
 
 bool Character::Hit(int h)
 {
@@ -88,7 +86,7 @@ void Character::PrintCharacter()//izvada vārdu, dzīvs (tad izvada arī dzīves
 {
     if (life>0) {
         cout<< "PrintCharacter: " <<name<<", "<<"Alive"<<", "<<life<<", ";
-        cout << "pēdējie 10 : ";
+        cout << "pēdējie 10 gajieni : ";
 
         for (int i = 0; i < 10; i++) {
             cout << Character::path[i] << " ";
@@ -96,6 +94,7 @@ void Character::PrintCharacter()//izvada vārdu, dzīvs (tad izvada arī dzīves
         
     } else {
         cout<< "PrintCharacter: " <<name<<", "<<"Dead"<<", ";
+        cout << "pēdējie 10 gajieni: ";
         
         for (int i = 0; i < 10; i++) {
             cout << Character::path[i] << " ";
