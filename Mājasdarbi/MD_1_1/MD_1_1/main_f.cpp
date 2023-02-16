@@ -78,7 +78,8 @@ void Character::Go(char j)//t-top, b-bottom, l-left, r-right parbaude, soļu ska
                     cout << "jābūt t-top, b-bottom, l-left, r-right" << endl;
                 }
                 
-                Character::path[i] = ch;// piešķir i tajai vērtībai jaunu vērtību
+                Character::path[i-(j-10)] = ch;// piešķir i tajai vērtībai jaunu vērtību un pavirza par i v;ertību tā lai būtu pēdējās 10 vērtības.
+                
                 
             }
             while ((ch != 't') && (ch != 'b') && (ch != 'l')&& (ch != 'r'));
@@ -99,7 +100,7 @@ void Character::PrintCharacter()//izvada vārdu, dzīvs (tad izvada arī dzīves
         }
         
     } else {
-        cout<< "PrintCharacter: " <<name<<", "<<"Dead"<<endl<<endl;
+        cout<< "PrintCharacter: " <<name<<", "<<"Dead"<<", ";
         
         for (int i = 0; i < 10; i++) {
             cout << Character::path[i] << " ";
