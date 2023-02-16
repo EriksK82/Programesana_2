@@ -10,22 +10,35 @@
 
 using namespace std;
 
-Character::Character(string n, int l){
-    name = n;
-    life = l;
+Character::Character(string name, int life){
+    Character::name = name;
+
+    if (life > 10) { // ja dzives skaits ir lielaks par 10, tad pieskiram maksimalu vertibu (10)
+        Character::life = 10;
+        return;
+    }
+
+    if (life < 1) { // ja dzives skaits ir mazaks par 1, tad pieskiram minimalu vertibu (1)
+        Character::life = 1;
+        return;
+    }
+
+    Character::life = life;
 }
+
+
 
 bool Character::Hit(int h)
 {
     if (life<=0) {
-        cout<<"Personāžs ir Dead"<<endl<<endl;
+        cout<<"Personāžs ir Dead"<<endl;
     } else {
         life = life - h;//samazina personāža dzīvi par parametra vērtību
         
         if (life>0) {
-            cout<<"Alive"<<endl<<endl;//atgriež alive ja life lielāks par 0
+            cout<<"Alive"<<endl;//atgriež alive ja life lielāks par 0
         } else {
-            cout<<"Dead"<<endl<<endl;//atgriež Dead ja life mazāks par 0
+            cout<<"Dead"<<endl;//atgriež Dead ja life mazāks par 0
         }
     }
     
@@ -35,9 +48,9 @@ bool Character::Hit(int h)
 int Character::GetLife()
 {
     if (life>0) {
-        cout << "GetLife: " << life<<endl<<endl;//izvada aktuālo life skaitu pēc samazinājuma ja vairāk par 0
+        cout << "Life: " << life<<endl;//izvada aktuālo life skaitu pēc samazinājuma ja vairāk par 0
     } else {
-        cout << "GetLife: " << "Dead for shure"<<endl<<endl;//paziņo ka ir miris jo dzīvibu vairs nav
+        cout << "Life: " << "Personāžs ir Dead"<<endl;//paziņo ka ir miris jo dzīvibu vairs nav
     }
     
     
@@ -48,13 +61,12 @@ void Character::Go(char j)//t-top, b-bottom, l-left, r-right parbaude, soļu ska
 {
     
     if (life<=0) {
-        cout<<"Personāžs ir Dead"<<endl<<endl;
+        cout<<"Personāžs ir Dead"<<endl;
     } else {
         
         char ch;
-        //string pth;
         
-        cout <<"Craracter "<<name<< " ievadiet kustibas virzienu t-top, b-bottom, l-left, r-right"<<endl;
+        cout <<endl<<"Craracter "<<name<< " ievadiet kustibas virzienu t-top, b-bottom, l-left, r-right"<<endl;
         for (int i=0; i<j; i++) {//j saņemtā vertiba par iešanas virzieniem
             
             do//parbauda vai ievade korekta liek ievadīt atkārtoti ja nav korekti
@@ -70,13 +82,8 @@ void Character::Go(char j)//t-top, b-bottom, l-left, r-right parbaude, soļu ska
                 
             }
             while ((ch != 't') && (ch != 'b') && (ch != 'l')&& (ch != 'r'));
-            
-            
-            
-            //pth.push_back(ch);
 
         }
-        //cout<<name<<" maršruts"<<pth<<endl<<endl;//izvada ievadīto ceļu pilnība
     }
 }
     
@@ -84,8 +91,8 @@ void Character::PrintCharacter()//izvada vārdu, dzīvs (tad izvada arī dzīves
 
 {
     if (life>0) {
-        cout<< "PrintCharacter: " <<endl<<name<<", "<<"Alive"<<", "<<GetLife()<<endl<<endl;
-        cout << "last 10 turns: ";
+        cout<< "PrintCharacter: " <<name<<", "<<"Alive"<<", "<<life<<", ";
+        cout << "pēdējie 10 : ";
 
         for (int i = 0; i < 10; i++) {
             cout << Character::path[i] << " ";
@@ -99,7 +106,6 @@ void Character::PrintCharacter()//izvada vārdu, dzīvs (tad izvada arī dzīves
         }
     }
     
-   
 }
 
 Character::~Character()

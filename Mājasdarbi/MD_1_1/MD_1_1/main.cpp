@@ -19,7 +19,7 @@ int main()
     
     Character Ch1("Eriks", 10);//Testa personāžs Nr.1 (vards,dzivibas)
     int Ch1_HitsTaken = 4;//samazina personāža dzīvi par parametra vērtību
-    int Ch1_MoveCount = 5;// personāža move skaits
+    int Ch1_MoveCount = 12;// personāža move skaits
     
     Ch1.Go(Ch1_MoveCount);// Go parbauda vai ievadits korekti, liek ievadīt kustības virzienus pēc augstāk noteikta skaita;
     Ch1.Hit(Ch1_HitsTaken);//statuss dead or alive
