@@ -7,31 +7,31 @@
 
 #include <iostream>
 #include <string>
-#include <typeinfo>
+#include "Header.h"
+
 
 using namespace std;
 
-class ProximitySensor
-{
-public:
-    
-    ProximitySensor(int,string);//piešķir sērijas numuru un izslēgto (off) statusu
-    void Get/Set state;
-    //bool Scan(“area”) – atgriež vai priekšā ir šķērslis, “area” ir pāra(ir)/nepāra(nav) cipars
-    //PrintSensor – izvada informāciju par sensoru
-    ~ProximitySensor();
-    
-    
-private:
-    string state(on/off);
-    int serial_number;
-
-
-};
-
-
-
 int main() {
 
+    
+    iRobot R1("1.modelis","Left_sen",false, "Right_sen",false);
+    
+    
+    int room[10] = {23, 35, 55, 74, 45, 46, 34, 77, 23, 98};
+    
+    
+    
+    R1.Run(room,10);
 
+    
+   
+    
+
+    
+    
+    
+    
+
+   //R1.PrintSensor();
 }
