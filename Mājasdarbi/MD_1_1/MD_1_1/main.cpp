@@ -50,14 +50,14 @@ int main()
     
     Ch2.Go('t');
     Ch2.Go('t');
+    Ch2.Go('l');
     Ch2.Go('t');
-    Ch2.Go('t');
-    Ch2.Go('t');
+    Ch2.Go('l');
     Ch2.Go('t');
     Ch2.Hit(5);
     Ch2.Go('t');
     Ch2.Hit(2);
-    Ch2.Go('t');
+    Ch2.Go('r');
     Ch2.Hit(2);
     Ch2.Go('t');
 

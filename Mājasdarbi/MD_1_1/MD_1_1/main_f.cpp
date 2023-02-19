@@ -64,7 +64,6 @@ void Character::Go(char d)//t-top, b-bottom, l-left, r-right parbaude, soļu ska
        
         if (d == 't' || d == 'r' || d == 'l' || d == 'b') {
             
-            if (Character::life > 0) {
                 for (int i = 0; i < 10; i++) {
                     if (i != 9) {
                         Character::path[i] = Character::path[i + 1];
@@ -72,7 +71,6 @@ void Character::Go(char d)//t-top, b-bottom, l-left, r-right parbaude, soļu ska
                 }
 
                 Character::path[9] = d;
-            }
          
         } else{
             cout << "Nepareizs virziens " << endl;
