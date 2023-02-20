@@ -22,7 +22,7 @@ int main() {
     int room_R2[10] = {23, 35, 55, 74, 44, 47, 34, 77, 23, 98};
     
     
-    R1.SwitchOnOff();// ieslēdzam sensorus ja izslēgti state falses mainam uz true
+    R1.SwitchOnOff();// ieslēdzam sensorus ja izslēgti state false mainam uz true
     R1.Run(room_R1);// laižam pa room
     
     R2.SwitchOnOff();
