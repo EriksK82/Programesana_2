@@ -31,7 +31,6 @@ public:
     void SwitchOnOff();
     void Run(int arr[]);
     void PrintRobot();
-
     //vai vajag private
     string model_name;
     ProximitySensor LeftSensor;
