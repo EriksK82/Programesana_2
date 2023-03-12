@@ -6,6 +6,7 @@
 
 #include <iostream>
 #include "Header.h"
+#include "main_f.cpp"
 
 using namespace std;
 

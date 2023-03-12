@@ -8,7 +8,8 @@
 #include <iostream>
 #include <string>
 #include "Header.h"
-
+#include "robot.cpp"
+#include "sensor.cpp"
 
 using namespace std;
 

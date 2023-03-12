@@ -70,6 +70,7 @@ void Time::printTime()
 
 int main()
 {
+   
    Time t;
    cout << "Laiks ir: ";
    t.printTime();
