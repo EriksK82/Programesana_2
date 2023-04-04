@@ -145,11 +145,13 @@ Time Time::operator++() {
                 hours++;
             }
             minutes = 0;
-        } else {
+        } 
+        else {
             minutes++;
         }
         seconds = 0;
-    } else {
+    } 
+    else {
         seconds++;
     }
 
@@ -207,7 +209,8 @@ Time Time::operator--(int) {
         }
 
         minutes = 59;
-    } else {
+    } 
+    else {
         minutes--;
     }
 
@@ -217,19 +220,19 @@ Time Time::operator--(int) {
 
 //laika salīdzināšana ar >
 bool Time::operator>(const Time &right) const {
-    if (hours > right.hours) {
-        return true;
-    }
-
-    if (hours == right.hours) {
-        if (minutes > right.minutes) {
+        if (hours > right.hours) {
             return true;
         }
 
-        if (minutes == right.minutes && seconds > right.seconds) {
-            return true;
-        }
-    }
+            if (hours == right.hours) {
+                if (minutes > right.minutes) {
+                    return true;
+                }
+
+                if (minutes == right.minutes && seconds > right.seconds) {
+                    return true;
+                }
+            }
 
     return false;
 }
@@ -237,18 +240,18 @@ bool Time::operator>(const Time &right) const {
 //laika salīdzināšana ar <
 bool Time::operator<(const Time &right) const {
         if (hours < right.hours) {
-        return true;
-    }
-
-    if (hours == right.hours) {
-        if (minutes < right.minutes) {
-            return true;
+             return true;
         }
 
-        if (minutes == right.minutes && seconds < right.seconds) {
-            return true;
-        }
-    }
+            if (hours == right.hours) {
+                if (minutes < right.minutes) {
+                    return true;
+                }
+
+                    if (minutes == right.minutes && seconds < right.seconds) {
+                        return true;
+                    }
+            }
 
     return false;
 }
@@ -274,9 +277,7 @@ bool Time::operator<=(const Time &right) const {
 
 //laika salīdzināšana ar ==
 bool Time::operator==(const Time &right) const {
-    if (hours == right.hours &&
-        minutes == right.minutes &&
-        seconds == right.seconds) {
+    if (hours == right.hours && minutes == right.minutes && seconds == right.seconds) {
         return true;
     }
 
@@ -338,7 +339,7 @@ int main() {
     cout << "Current times:"<<endl << "Laiks 1: " << laiks1 << endl<< "Laiks 2: " << laiks2<< endl << "Laiks 3: " << laiks3 << endl;
 
 //laika salīdzināšana ar >, <, >=, <=, ==, != operatoriem
-if (laiks1 > laiks2)
+    if (laiks1 > laiks2)
         cout << "laiks 1 > laiks 2" << endl;
     if (laiks1 < laiks2)
         cout << "laiks 1 < laiks 2" << endl;
@@ -350,6 +351,10 @@ if (laiks1 > laiks2)
         cout << "laiks 1 == laiks 2" << endl;
     if (laiks1 != laiks2)
         cout << "laiks 1 != laiks2" << endl;
+
+            system("PAUSE");
+
+    return 0;
 }
 
 
