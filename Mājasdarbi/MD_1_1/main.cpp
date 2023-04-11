@@ -14,7 +14,7 @@ using namespace std;
 
 int main()
 {
-    cout<<"Personāžš Suns"<<endl;
+    cout<<"Personazs Suns"<<endl;
     
     Character Ch1("suns", 10);//Testa personāžs Nr.1 (vards,dzivibas)
     
@@ -40,30 +40,33 @@ int main()
     Ch1.Go('b');
     Ch1.Go('l');
     Ch1.Hit(1);
+    cout<<Ch1.GetLife();
+    Ch1.GetLife();
+
 
     
-    Ch1.PrintCharacter();
-    cout << endl;
+    // Ch1.PrintCharacter();
+    // cout << endl << endl;
     
-    cout<<"Personāžš Suns"<<endl;
+    // cout<<"Personazs kakis"<<endl;
     
-    Character Ch2("kaķis", 7);
+    // Character Ch2("kakis", 7);
     
-    Ch2.Go('t');
-    Ch2.Go('t');
-    Ch2.Go('l');
-    Ch2.Go('t');
-    Ch2.Go('l');
-    Ch2.Go('t');
-    Ch2.Hit(5);
-    Ch2.Go('t');
-    Ch2.Hit(2);
-    Ch2.Go('r');
-    Ch2.Hit(2);
-    Ch2.Go('t');
+    // Ch2.Go('t');
+    // Ch2.Go('t');
+    // Ch2.Go('l');
+    // Ch2.Go('t');
+    // Ch2.Go('l');
+    // Ch2.Go('t');
+    // Ch2.Hit(5);
+    // Ch2.Go('t');
+    // Ch2.Hit(2);
+    // Ch2.Go('r');
+    // Ch2.Hit(2);
+    // Ch2.Go('t');
 
     
-    Ch2.PrintCharacter();
+    // Ch2.PrintCharacter();
 
    return 0;
 }

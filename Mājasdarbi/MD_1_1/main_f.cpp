@@ -29,7 +29,7 @@ Character::Character(string name, int life){
 bool Character::Hit(int h)
 {
     if (life<=0) {
-        cout<<"Personāžs ir Dead"<<endl;
+        cout<<"Personazs ir Dead"<<endl;
     } else {
         life = life - h;//samazina personāža dzīvi par parametra vērtību
         
@@ -45,21 +45,20 @@ bool Character::Hit(int h)
 
 int Character::GetLife()
 {
-    if (life>0) {
-        cout << "Life: " << life<<endl;//izvada aktuālo life skaitu pēc samazinājuma ja vairāk par 0
-    } else {
-        cout << "Life: " << "Personāžs ir Dead"<<endl;//paziņo ka ir miris jo dzīvibu vairs nav
-    }
+    // if (life>0) {
+    //     cout << "Life: " << life<<endl;//izvada aktuālo life skaitu pēc samazinājuma ja vairāk par 0
+    // } else {
+    //     cout << "Life: " << "Personazs ir Dead"<<endl;//paziņo ka ir miris jo dzīvibu vairs nav
+    // }
     
-    
-    return 0;
+        return life;
 }
     
 void Character::Go(char d)//t-top, b-bottom, l-left, r-right parbaude, soļu skaita parbaude
 {
     
     if (life<=0) {
-        cout<<"Personāžs ir Dead"<<endl;
+        cout<<"Personazs ir Dead"<<endl;
     } else {
        
         if (d == 't' || d == 'r' || d == 'l' || d == 'b') {
@@ -84,7 +83,7 @@ void Character::PrintCharacter()//izvada vārdu, dzīvs (tad izvada arī dzīves
 {
     if (life>0) {
         cout<< "PrintCharacter: " <<name<<", "<<"Alive"<<", "<<life<<", ";
-        cout << "pēdējie 10 gajieni : ";
+        cout << "pedejie 10 gajieni : ";
 
         for (int i = 0; i < 10; i++) {
             cout << Character::path[i] << " ";
@@ -92,7 +91,7 @@ void Character::PrintCharacter()//izvada vārdu, dzīvs (tad izvada arī dzīves
         
     } else {
         cout<< "PrintCharacter: " <<name<<", "<<"Dead"<<", ";
-        cout << "pēdējie 10 gajieni: ";
+        cout << "pedejie 10 gajieni: ";
         
         for (int i = 0; i < 10; i++) {
             cout << Character::path[i] << " ";
