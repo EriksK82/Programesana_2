@@ -4,17 +4,16 @@
 // GetLevel() 
 // Print()
 
-
 #include "Character.h"
 
 using namespace std;
 
-class Monster :  public Character {
+class Monster : public Character {
 public:
-    Monster(string, int, int);// konstruktors
-    int GetLevel() const;// GetLevel() 
-    void Print();// Print()
+    Monster(string, int, int);
+    int GetLevel() const;
+    void Print();
 
 protected:
-    int level;//int parametru level.
+    int level;
 };

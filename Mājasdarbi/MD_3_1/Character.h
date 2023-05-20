@@ -49,10 +49,8 @@ public:
     
 protected:   
     int life;
-
-private:
     string name;
-        char path[10];
+    char path[10];
 };
 
 #endif /* Character_h */

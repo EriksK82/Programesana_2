@@ -7,19 +7,16 @@
 
 #include "Hero.h"
 
-using namespace std;
-
-
 Hero::Hero(string name, int life, int experience) : Character(name, life) {
-    Hero::experience = (experience > 0) ? experience : 1;//nodefinējam sākotnējo vērtību experience
+    Hero::experience = (experience > 0) ? experience : 1;
 }
 
 void Hero::Kill(Monster &monster) {
-    Hero::experience += monster.GetLife() * monster.GetLevel();//palielina experience par Monster life*level
+    Hero::experience += monster.GetLife() * monster.GetLevel();
     monster.Hit(monster.GetLife());
 }
 
 void Hero::Print() {
     Hero::PrintCharacter();
-    cout << "Experience: " << Hero::experience << endl;// Print()
+    cout << "Experience: " << Hero::experience << endl;
 }

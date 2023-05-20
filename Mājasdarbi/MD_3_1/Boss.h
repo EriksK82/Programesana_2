@@ -5,17 +5,17 @@
 // Eat(Hero) – palielina Boss life par Hero life, palielina Boss heads par 1
 // Print()
 
-#include "Hero.h"
+#include "Character.h"
 
 using namespace std;
 
 class Boss : public Monster {
 public:
-    Boss(string, int, int, int);// konstruktors
-    int GetHeads() const;// GetHeads() 
-    void Eat(Hero &);//Eat(Hero) – palielina Boss life par Hero life, palielina Boss heads par 1
-    void Print();// Print()
+    Boss(string, int, int, int);
+    int GetHeads() const;
+    void Eat(Hero &);
+    void Print();
 
 protected:
-    int heads;//jāatvasina klasi Boss ar int parametru heads
+    int heads;
 };
