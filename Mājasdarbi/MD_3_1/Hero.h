@@ -9,25 +9,12 @@
 #include "Character.h"
 #include "Monster.h"
 
-// using namespace std;
-
-// class Hero: public Character {//No Character jāatvasina klasi Hero
-
-// public:
-//     Hero(string, int);// kā tas izskatīsies konstruktorā - modelis???
-//     void Kill(Monster &);//Kill(Monster)
-//     void Print();//Print()
-//     // ~Hero();
-
-// private:
-//     int experience;//int parametru experience
-// };
 class Hero : public Character {
 public:
-    Hero(string, int, int);
-    void Kill(Monster &);
-    void Print();
+    Hero(string, int, int);// konstruktors
+    void Kill(Monster &);// Kill(Monster) – palielina experience par Monster life*level
+    void Print();// Print()
 
 protected:
-    int experience;
+    int experience;//int parametru experience
 };

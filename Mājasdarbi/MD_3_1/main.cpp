@@ -1,12 +1,22 @@
-//
+// Galvenā programmā izveidot pa vienam Hero, Monster, Boss objektam.
+// Visiem objektiem izsaukt Print
+// Hero Kill Monster
+// Boss Eat Hero 
+// Visiem objektiem izsaukt Print
+
 //  main.cpp
-//  MD_1_1
-//
-//  Created by Eriks Karklins on 14/02/2023.
+//  MD_3_1
+
 
 #include <iostream>
 #include "Character.h"
 #include "Character.cpp"
+#include "Hero.h"
+#include "Hero.cpp"
+#include "Monster.h"
+#include "Monster.cpp"
+#include "Boss.h"
+#include "Boss.cpp"
 
 using namespace std;
 
@@ -14,39 +24,26 @@ using namespace std;
 
 int main()
 {
-    cout<<"Personazs Suns"<<endl;
-    
-    Character Ch1("suns", 10);//Testa personāžs Nr.1 (vards,dzivibas)
-    
-    Ch1.Go('t');
-    Ch1.Go('t');
-    Ch1.Go('t');
-    Ch1.Go('l');
-    Ch1.Go('t');
-    Ch1.Go('t');
-    Ch1.Hit(1);
-    Ch1.Go('l');
-    Ch1.Go('t');
-    Ch1.Go('t');
-    Ch1.Go('t');
-    Ch1.Hit(1);
-    Ch1.Go('t');
-    Ch1.Go('t');
-    Ch1.Go('t');
-    Ch1.Hit(1);
-    Ch1.Go('b');
-    Ch1.Go('b');
-    Ch1.Go('s');//nepareiza ievade
-    Ch1.Go('b');
-    Ch1.Go('l');
-    Ch1.Hit(1);
-    cout<<Ch1.GetLife();
-    Ch1.GetLife();
-
-
-    
-    // Ch1.PrintCharacter();
   
+    Hero hero("Suns", 8, 4);//izveidot pa vienam Hero, Monster, Boss objektam
+    Monster monster("Kakis", 2, 1);
+    Boss boss("lapsa", 99, 30, 0);
+
+    cout << "Print():" << endl;// Visiem objektiem izsaukt Print
+    hero.Print();
+    monster.Print();
+    boss.Print();
+
+    cout << "Hero Kill Monster:" << endl;// Hero Kill Monster
+    hero.Kill(monster);
+
+    cout << "Boss Eat Hero :" << endl;// Boss Eat Hero 
+    boss.Eat(hero);
+
+    cout << "Print():" << endl;// Visiem objektiem izsaukt Print
+    hero.Print();
+    monster.Print();
+    boss.Print();
     
    return 0;
 }

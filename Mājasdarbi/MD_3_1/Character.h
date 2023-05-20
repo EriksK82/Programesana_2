@@ -47,11 +47,12 @@ public:
     void PrintCharacter();
     ~Character();
     
-    
+protected:   
+    int life;
+
 private:
     string name;
-    int life;
-    char path[10];
+        char path[10];
 };
 
 #endif /* Character_h */

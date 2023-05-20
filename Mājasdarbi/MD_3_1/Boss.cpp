@@ -1,20 +1,27 @@
+// No Monster jāatvasina klasi Boss ar int parametru heads.
+//     Jārealizē metodes:
+// konstruktors
+// GetHeads() 
+// Eat(Hero) – palielina Boss life par Hero life, palielina Boss heads par 1
+// Print()
+
 #include "Boss.h"
 
-Boss::Boss(string name, int life, int level, int heads) : Monster(name, life, level) {
+Boss::Boss(string name, int life, int level, int heads) : Monster(name, life, level) {// konstruktors
     Boss::heads = (heads > 0) ? heads : 0;
 }
 
-int Boss::GetHeads() const {
+int Boss::GetHeads() const {// GetHeads() 
     return Boss::heads;
 }
 
-void Boss::Eat(Hero &hero) {
-    Boss::life += hero.GetOriginalLife();
+void Boss::Eat(Hero &hero) {// Eat(Hero) – palielina Boss life par Hero life, palielina Boss heads par 1
+    Boss::life += hero.GetLife();
     Boss::heads += 1;
     hero.Hit(hero.GetLife());
 }
 
-void Boss::Print() {
+void Boss::Print() {// Print()
     Boss::PrintCharacter();
     cout << "Level: " << Boss::level << endl;
     cout << "Heads: " << Boss::heads << endl;
