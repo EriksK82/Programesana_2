@@ -5,8 +5,8 @@
 //  Created by Eriks Karklins on 14/02/2023.
 
 #include <iostream>
-#include "Header.h"
-#include "main_f.cpp"
+#include "Character.h"
+#include "Character.cpp"
 
 using namespace std;
 
@@ -45,29 +45,9 @@ int main()
 
 
     
-    Ch1.PrintCharacter();
-    cout << endl << endl;
+    // Ch1.PrintCharacter();
+  
     
-    cout<<"Personazs kakis"<<endl;
-    
-    Character Ch2("kakis", 7);
-    
-    Ch2.Go('t');
-    Ch2.Go('t');
-    Ch2.Go('l');
-    Ch2.Go('t');
-    Ch2.Go('l');
-    Ch2.Go('t');
-    Ch2.Hit(5);
-    Ch2.Go('t');
-    Ch2.Hit(2);
-    Ch2.Go('r');
-    Ch2.Hit(2);
-    Ch2.Go('t');
-
-    
-    Ch2.PrintCharacter();
-
    return 0;
 }
 
