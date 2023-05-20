@@ -1,5 +1,11 @@
+// konstruktors
+// SetText
+// GetKatrsParametrs
+// PrintText  //parametru vērtību izvade
+
 #include "Text.h"
 
+// konstruktors
 Text::Text(string f, double s, string c, string d) {
     Text::font = f;
     Text::size = s;
@@ -7,6 +13,7 @@ Text::Text(string f, double s, string c, string d) {
     Text::data = d;
 }
 
+// SetText
 void Text::SetText(string f, double s, string c, string d) {
     Text::font = f;
     Text::size = s;
@@ -14,6 +21,7 @@ void Text::SetText(string f, double s, string c, string d) {
     Text::data = d;
 }
 
+// GetKatrsParametrs
 TextStruct Text::GetKatrsParameters() const {
     TextStruct text;
 
@@ -25,10 +33,11 @@ TextStruct Text::GetKatrsParameters() const {
     return text;
 }
 
+// PrintText  //parametru vērtību izvade
 void Text::PrintText() const {
-    cout << "Text Parameters:" << endl;
+    cout << "PrintText" << endl;
     cout << "Font: " << Text::font << endl;
-    cout << "Size: " << Text::size << "px" << endl;
+    cout << "Size: " << Text::size << endl;
     cout << "Color: " << Text::color << endl;
     cout << "Data: " << Text::data << endl;
 }
