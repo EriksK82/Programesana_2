@@ -11,11 +11,11 @@ using namespace std;
 
 class Boss : public Monster {
 public:
-    Boss(string, int, int, int);
-    int GetHeads() const;
-    void Eat(Hero &);
-    void Print();
+    Boss(string, int, int, int);// konstruktors
+    int GetHeads() const;// GetHeads() 
+    void Eat(Hero &);// Eat(Hero) 
+    void Print();// Print()
 
 protected:
-    int heads;
+    int heads;//jāatvasina klasi Boss ar int parametru heads
 };

@@ -7,15 +7,17 @@
 
 #include "Character.h"
 
-Monster::Monster(string name, int life, int level) : Character(name, life) {
+Monster::Monster(string name, int life, int level) : Character(name, life) {// konstruktors ar sākotnējo levelu 1
     Monster::level = (level > 0) ? level : 1;
 }
 
-int Monster::GetLevel() const {
+
+int Monster::GetLevel() const {// GetLevel() 
     return Monster::level;
 }
 
-void Monster::Print() {
+
+void Monster::Print() {// Print()
     Monster::PrintCharacter();
     cout << "Level: " << Monster::level << endl;
 }

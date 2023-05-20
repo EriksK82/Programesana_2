@@ -1,8 +1,7 @@
 //
 //  Character.h
 //  MD_3_1
-//
-//  Created by Eriks Karklins on 14/02/2023.
+
 //
 // Izveidot klasi Character - personāžs, kas iekapsulē laukus:
 // string name; - vārds;

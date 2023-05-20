@@ -9,12 +9,13 @@
 
 using namespace std;
 
+
 class Hero : public Character {
 public:
-    Hero(string, int, int);
-    void Kill(Monster &);
-    void Print();
+    Hero(string, int, int);// konstruktors
+    void Kill(Monster &);// Kill(Monster)
+    void Print();// Print()
 
 protected:
-    int experience;
+    int experience;// 1. No Character jāatvasina klasi Hero ar int parametru experience.
 };
