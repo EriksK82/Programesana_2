@@ -2,6 +2,7 @@
 
 using namespace std;
 
+////
 ////////////////////////////// klase Text
 
 struct TextStruct {//Struktūras mainīgo noteikšana, //Jārealizē klasi Text ar parametriem font, size, color, data.
